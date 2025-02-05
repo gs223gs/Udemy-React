@@ -8,7 +8,9 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [react(), dynamicImport()],
   server: {
-    port: 3001,
+    // 使用するポート番号の指定 default 5137
+    host: '0.0.0.0',
+    port: 3000,
   },
   // テスト参考
   // https://vitest.dev/guide/#workspaces-support
