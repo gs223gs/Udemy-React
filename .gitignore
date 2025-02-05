@@ -2,34 +2,4 @@
 .DS_Store
 Thumbs.db
 
-# ログファイル
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# 環境変数や設定ファイル
-.env
-.env.local
-.env.*.local
-
-# バイナリファイル
-*.exe
-*.dll
-*.so
-*.dylib
-*.pyc
-*.pyo
-*.pyd
-*.class
-*.o
-*.a
-*.lib
-*.obj
-*.swp
-*.swo
-
-# バックアップファイル
-*.bak
-*.orig
-*.old
