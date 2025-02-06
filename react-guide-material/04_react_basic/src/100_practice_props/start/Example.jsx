@@ -1,8 +1,8 @@
 import Profile from "./components/Profile";
 
 const profile = [
-  { name: "Takashi", age: 19, country: "Japan" },
-  { name: "Jane", age: 28, country: "UK" },
+  { name: "Takashi", age: 19, country: "Japan", color: 'green' },
+  { name: "Jane", age: 28, country: "UK", color: 'blue' },
 ];
 
 const Example = () => {
@@ -15,6 +15,7 @@ const Example = () => {
         name={profile[0].name}
         age={profile[0].age}
         country={profile[0].country}
+        color = {profile[0].color}
       />
       <Profile {...profile[1]} />
       <Profile />
