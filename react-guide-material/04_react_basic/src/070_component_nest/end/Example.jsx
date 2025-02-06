@@ -1,5 +1,15 @@
 import Child from "./components/Child";
 
-const Example = () => <Child />;
 
+for(let i = 0 ; i < 5; i++){
+  //
+}
+const Example = () => {
+  return (
+  <>
+    <Child />
+
+  </>
+  );
+};
 export default Example;
