@@ -1,11 +1,20 @@
+import Profile from './components/Profile'
+
 const Example = () => {
+  const humans = [
+    {id:1, Name:'Geo', age:18, hobbys:['sports', 'music']},
+    {id:2, Name:'Tom', age:19, hobbys:['movie', 'music']},
+    {id:3, Name:'Lisa', age:20, hobbys:['sports', 'travel', 'game']},
+  ];
   return (
     <>
-      <h3>練習問題</h3>
-      <p>Profileコンポーネントを使用して、完成コードと同じ画面を作成してください。</p>
-      <p>また、Profileコンポーネント内のリスト表示部分にkeyを設定して、ワーニング表示がされないようにしてください。</p>
       <ul>
-        {/* ここに記述 */}
+        {humans.map((human) => (
+          <li key={human.id}>
+            <Profile name={human.Name} age={human.age} hobbys={human.hobbys} />
+            
+          </li>
+        ))}
       </ul>
     </>
   );

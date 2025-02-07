@@ -1,4 +1,8 @@
-const Profile = ({ name, age, hobbies }) => {
+const Profile = ({ name, age, hobbys }) => {
+  console.log(name)
+  console.log(age)
+  console.log(hobbys)
+
   return (
     <div>
       <hr />
@@ -7,8 +11,8 @@ const Profile = ({ name, age, hobbies }) => {
       <div>
         <div>Hobby:</div>
         <ul>
-          {hobbies.map((hobby) => (
-            <li>{hobby}</li>
+          {hobbys.map((hobby) => (
+            <li key={hobby}>{hobby}</li>
           ))}
         </ul>
       </div>
