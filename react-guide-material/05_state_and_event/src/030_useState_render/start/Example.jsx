@@ -1,20 +1,13 @@
-import { useState } from "react";
+import Test from "./components/Test";
 
 const Example = () => {
-  let displayVal;
-  let [ val, setVal ] = useState();
-  console.log('再レンダリングされました');
+  console.log('pearent 再レンダリングされました');
   return (
     <>
-      <input
-        type="text"
-        onChange={(e) => {
-          console.log(e.target.value);
-          setVal(e.target.value);
-          // displayVal = e.target.value;
-        }}
-      />
-      = {val}
+    <Test num = {1}/>
+    <Test num = {2}/>
+    <Test num = {3}/>
+    <Test num = {4}/>
     </>
   );
 };
