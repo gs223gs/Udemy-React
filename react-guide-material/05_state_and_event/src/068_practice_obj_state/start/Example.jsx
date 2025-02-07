@@ -3,9 +3,12 @@ import { useState } from 'react';
 const Example = () => {
   const orderObj = { item: 'apple', count: 10 };
   const [order, setOrder] = useState(orderObj);
-  const changeItem = (e) => {setOrder({...order, item: e.target.value})};
-  const countUp = () => {setOrder( {...order, count: order.count + 1})};
-  const countDown = () => {setOrder( {...order, count: order.count - 1})};
+  const changeItem = (e) => {
+    setOrder(order =>({...order, item: e.target.value}));
+  };
+  const countUp = () => {order =>({...order, count: order.count + 1})};
+  const countDown = () => {order =>({...order, count: order.count - 1})};
+  console.log(setOrder)
   return (
     <div>
       <h3>練習問題</h3>
