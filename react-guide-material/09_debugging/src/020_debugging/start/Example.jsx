@@ -1,7 +1,8 @@
+import { useDebugValue } from "react";
 import { useState } from "react"
 
-const Child = (countNum) => {
-  return <p>現在のカウント数: {countNum.val}</p>
+const Child = ({val}) => {
+  return <p>現在のカウント数: {val}</p>
 }
 
 const Example = () => {
@@ -16,7 +17,7 @@ const Example = () => {
 
   return (
     <>
-      <Child count={count} />
+      <Child val={count.val} />
       <button onClick={countUp}>+</button>
     </>
   );
