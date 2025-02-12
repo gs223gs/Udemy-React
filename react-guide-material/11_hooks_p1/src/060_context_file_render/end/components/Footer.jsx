@@ -2,7 +2,7 @@
 
 const Footer = () => {
   // const setTheme = useUpdateTheme();
-  // console.log('footer')
+  console.log('footer')
 
   return (
     <footer>

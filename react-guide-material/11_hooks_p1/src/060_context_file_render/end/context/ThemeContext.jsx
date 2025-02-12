@@ -7,11 +7,11 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <ThemeUpdateContext.Provider value={setTheme}>
+    <ThemeUpdateContext.Provider value={setTheme}>
+      <ThemeContext.Provider value={theme}>
         {children}
-      </ThemeUpdateContext.Provider>
-    </ThemeContext.Provider>
+      </ThemeContext.Provider>
+    </ThemeUpdateContext.Provider>
   );
 };
 

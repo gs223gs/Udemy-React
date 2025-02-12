@@ -1,7 +1,11 @@
 import CounterResult from "./CounterResult"
 import CounterButton from "./CounterButton"
+import { useCounter, useUpdateCounter } from "../context/CountContext"
 
-const Counter = ({ state, countUp, countDown }) => {
+const Counter = () => {
+    const state = useCounter()
+    const [countUp,] = useUpdateCounter()
+    const [ ,countDown] = useUpdateCounter()
     return (
         <>
             <CounterResult state={state} />

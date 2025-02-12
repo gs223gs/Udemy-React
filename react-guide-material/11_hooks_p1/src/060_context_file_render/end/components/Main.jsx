@@ -3,7 +3,7 @@ import { useTheme } from "../context/ThemeContext"
 const Main = () => {
   const theme = useTheme();
 
-  // console.log('main')
+  console.log('main')
 
   return (
     <main className={`content-${theme}`}>

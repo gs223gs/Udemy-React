@@ -9,7 +9,7 @@ const Header = () => {
 
   const changeTheme = (e) => setTheme(e.target.value);
 
-  // console.log('header')
+  console.log('header')
 
   return (
     <header className={`content-${theme}`}>
