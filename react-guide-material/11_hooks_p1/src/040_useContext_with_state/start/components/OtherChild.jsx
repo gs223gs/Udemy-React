@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
+
 
 const OtherChild = () => {
   const [ value, setValue ] = useState(0);
-
+  console.log(value)
   const clickHandler = (e) => {
     setValue((prev) => prev + 1);
   };
@@ -15,5 +16,4 @@ const OtherChild = () => {
     </div>
   );
 };
-
 export default OtherChild;
