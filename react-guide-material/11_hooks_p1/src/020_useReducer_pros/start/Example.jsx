@@ -10,6 +10,7 @@ import { useReducer, useState } from "react";
 // 純粋性（純粋関数）
 // 特定の引数に特定の戻り値
 const reducer = (prev, { type, step }) => {
+  console.log(prev)
   switch (type) {
     case "+":
       return prev + step;

@@ -9,18 +9,17 @@ const reducer = (state, { type, payload }) => {
       const { name, value } = payload;
       return { ...state, [name]: value };
     }
-    // inputのvalueの値がJavaScriptに渡される際に文字列になるため数値に変換
     case "add": {
-      return { ...state, result: Number(state.a) + Number(state.b) };
+      return { ...state, result: state.a + state.b };
     }
     case "minus": {
-      return { ...state, result: Number(state.a) - Number(state.b) };
+      return { ...state, result: state.a - state.b };
     }
     case "divide": {
-      return { ...state, result: Number(state.a) / Number(state.b) };
+      return { ...state, result: state.a / state.b };
     }
     case "multiply": {
-      return { ...state, result: Number(state.a) * Number(state.b) };
+      return { ...state, result: state.a * state.b };
     }
     default:
       throw new Error("operator is invalid");
@@ -32,17 +31,19 @@ const Example = () => {
     a: 1,
     b: 2,
     result: 3,
+    type: "add",
   };
 
   const [state, dispatch] = useReducer(reducer, initState);
 
   const calculate = (e) => {
     dispatch({ type: e.target.value });
+    dispatch({ type: "change", payload: { name: "type", value: e.target.value } });
   };
   const numChangeHandler = (e) => {
     dispatch({
       type: "change",
-      payload: { name: e.target.name, value: e.target.value },
+      payload: { name: e.target.name, value: Number(e.target.value) },
     });
   };
   return (
@@ -73,6 +74,7 @@ const Example = () => {
         ))}
       </select>
       <h3>結果：{state.result}</h3>
+      <p>{state.type}</p>
     </>
   );
 };
