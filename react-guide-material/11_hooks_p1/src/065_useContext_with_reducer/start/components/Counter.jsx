@@ -11,6 +11,8 @@ const Counter = () => {
             <CounterResult state={state} />
             <CounterButton step={2} calcType="+" onClick={countUp}/>
             <CounterButton step={2} calcType="-" onClick={countDown}/>
+            <CounterButton step={20} calcType="+" onClick={countUp}/>
+            <CounterButton step={20} calcType="-" onClick={countDown}/>
         </>
     )
 }

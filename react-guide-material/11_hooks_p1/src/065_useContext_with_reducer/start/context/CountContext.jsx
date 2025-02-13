@@ -15,11 +15,15 @@ export const CountProvider = ({ children }) => {
     }
   }, 0);
 
-  const countUp = () => {
-    dispatch({ type: "+", step: 2 });
+  const countUp = (e) => {
+    console.log(e.target.value);
+    const stepInt =parseInt(e.target.value)
+    console.log(stepInt)
+    dispatch({ type: "+", step: stepInt });
   };
-  const countDown = () => {
-    dispatch({ type: "-", step: 2 });
+  const countDown = (e) => {
+    const stepInt =parseInt(e.target.value)
+    dispatch({ type: "-", step: stepInt });
   };
 
   return (
