@@ -1,19 +1,19 @@
-const List = ({todos, deleteTodo}) => {
-    const complete = (id) => {
-        deleteTodo(id)
-    }
-    return (
-        <div>
-            {todos.map(todo => {
-                return (
-                    <div key={todo.id}>
-                        <button onClick={() => complete(todo.id)}>完了</button>
-                        <span>{todo.content}</span>
-                    </div>
-                )
-            })}
-        </div>
-    );
-}
+import Item from "./Item";
+const List = ({ todos,  dispatch }) => {
+  const complete = (id) => {
+    dispatch({type:'delete', payload:id})
+  };
+  return (
+    <div>
+      {todos.map((todo) => {
+        return (
+          <div key={todo.id}>
+            <Item todo={todo} complete={complete} dispatch={dispatch} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 export default List;
