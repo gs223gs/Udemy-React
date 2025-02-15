@@ -1,4 +1,7 @@
-const Input = ({ state, name, dispatch }) => {
+import { useDispatch } from "../contexts/ClacContext";
+
+const Input = ({ name,}) => {
+  const [state, ,dispatch] = useDispatch()
   const numChangeHandler = (e) => {
     dispatch({
       type: "change",

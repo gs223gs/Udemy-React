@@ -1,5 +1,9 @@
-const Select = ({ CALC_OPTIONS, state, calculate }) => {
-  console.log(calculate)
+import { useCALC } from "../contexts/ClacContext";
+import { useDispatch } from "../contexts/ClacContext";
+
+const Select = () => {
+  const CALC_OPTIONS = useCALC();
+  const [state, calculate, ] = useDispatch();
   return (
     <div>
       <select value={state.type} name="type" onChange={calculate}>

@@ -45,7 +45,7 @@ export const CalcProvider = ({ children }) => {
   };
 
   return (
-    <ReducerContext.Provider value={[state,calculate]}>
+    <ReducerContext.Provider value={[state,calculate,dispatch]}>
       <CALC_OPTIONSContext.Provider value={CALC_OPTIONS}>
         {children}
       </CALC_OPTIONSContext.Provider>
