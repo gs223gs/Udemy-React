@@ -7,24 +7,29 @@ const Example = () => {
 
   useEffect(
     function update() {
-      console.log("update");
+      console.log("10 update");
 
       return function cleanUp() {
-        console.log("update cleanup");
+        const arr =[]
+        console.log("14 update cleanup");
+        for(let i = 0; i < 5; i++){
+          arr.push(i)
+        }
+        console.log(arr)
       };
     },
     [state]
   );
 
   useEffect(() => {
-    console.log("mount");
+    console.log("25 mount");
 
     return () => {
-      console.log("mount cleanup");
+      console.log("28 mount cleanup");
     };
   }, []);
 
-  console.log("render");
+  console.log("32 render");
   
   return (
     <>
